@@ -1,0 +1,7 @@
+Các bước cần thực hiện
+1. Chuẩn bị file cần upgrade và chuyển file vào server
+2. Kiểm tra các gói phụ thuộc của file upgrade, tránh trường hợp upgrade bị lỗi
+  rpm -qpR <tên_gói>
+3. Upgrade: yum update -y <tên_gói>
+4. Kiểm tra version gói sau khi chạy xong: rpm -qa | grep <tên_gói>
+5. Trên console QRadar chọn Deploy Full
