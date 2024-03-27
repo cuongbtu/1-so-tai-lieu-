@@ -49,7 +49,7 @@ Do đặc điểm của từng loại chính sách khác nhau, việc rà soát,
 <tr><td colspan="1">3\. Loại bỏ các luật sai logic</td><td colspan="1">Rà soát thủ công các luật</td><td colspan="1"></td><td colspan="1"></td><td colspan="1"></td><td colspan="1"></td></tr>
 <tr><td colspan="1">4\. Loại bỏ các luật thừa</td><td colspan="1">Tuân theo khuyến nghị  khi viết luật (*)</td><td colspan="1"></td><td colspan="1"></td><td colspan="1"></td><td colspan="1"></td></tr>
 </table>
-(\*) khuyến nghị khi xây dựng và quản lý access rule: (cùng áp dụng cho mục tiêu thứ 3 (O3): Operation)
+(*) khuyến nghị khi xây dựng và quản lý access rule: (cùng áp dụng cho mục tiêu thứ 3 (O3): Operation)
 
 - Documenting, description:
   - Purpose, owner, service/system
@@ -58,21 +58,21 @@ Do đặc điểm của từng loại chính sách khác nhau, việc rà soát,
 - Logging action: is it necessary?
 
 # QRadar rule tuning
-\- Mục đích & quy trình tuning rule
+- Mục đích & quy trình tuning rule
 
 **O1: Security**
 
-1\. Rà soát lại logic của rule **so với ý tưởng, yêu cầu ban đầu**
+1. Rà soát lại logic của rule **so với ý tưởng, yêu cầu ban đầu**
 
 (việc này đã làm từ giai đoạn 1 => logic chắc chắn phải là đúng)
 
-2\. **Rule match ít** (gồm cả không match) => khả năng bỏ sót false negative
+2. **Rule match ít** (gồm cả không match) => khả năng bỏ sót false negative
 
 => mục tiêu: bắt thêm được false negative, để biến nó thành true positive
 
 - trường hợp lý tưởng: rule chạy đúng, chỉ toàn true negative, ít hoặc không có true positive
 
-\- kiểm tra lại logic, ngưỡng để xem có bỏ sót thật không
+- kiểm tra lại logic, ngưỡng để xem có bỏ sót thật không
 
 - logic: đáng ra phải match với traffic đó nhưng thực tế lại không match.VD: 
   - logic sai:
@@ -92,15 +92,15 @@ Do đặc điểm của từng loại chính sách khác nhau, việc rà soát,
 
 => điều chỉnh & theo dõi
 
-\- kiểm tra flow thực tế trên network activity để tìm false negative
+- kiểm tra flow thực tế trên network activity để tìm false negative
 
-3\. **Rule match nhiều** => khả năng bắt nhầm quá nhiều false positive
+3. **Rule match nhiều** => khả năng bắt nhầm quá nhiều false positive
 
 => mục tiêu: giảm bớt số trường hợp bắt phải false positive mà vẫn giữ nguyên true positive
 
 - trường hợp lý tưởng: rule chạy đúng, rất nhiều true positive
 
-\- kiểm tra lại logic, ngưỡng để xem có đúng là nhiều false positive không
+- kiểm tra lại logic, ngưỡng để xem có đúng là nhiều false positive không
 
 - logic:
   - test để tham số quá rộng
@@ -111,7 +111,7 @@ Do đặc điểm của từng loại chính sách khác nhau, việc rà soát,
 
 => điều chỉnh & theo dõi
 
-\- kiểm tra flow thực tế trên network activity để tìm ???
+- kiểm tra flow thực tế trên network activity để tìm ???
 
 **O2: Performance**
 
