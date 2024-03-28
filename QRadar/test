@@ -1,0 +1,21 @@
+and when the event matches Log Source Type is Microsoft Windows Security Event Log
+and when an event matches any of the following BB:1:Anomaly Detection ATTCK T1021_002 SMB Windows Admin Shares Ver1, BB:2:Anomaly Detection ATTCK T1021_002 SMB Windows Admin Shares Ver1, BB:3:Anomaly Detection ATTCK T1021_002 SMB Windows Admin Shares Ver1, BB:4:Anomaly Detection ATTCK T1021_002 SMB Windows Admin Shares Ver1
+
+
+Apply BB:1:Anomaly Detection ATTCK T1021_002 SMB Windows Admin Shares Ver1 on events which are detected by the Local system
+and when the event matches Event ID is any of 5140
+and when the event matches Share Name (custom) contains any of [IPC$ or ADMIN$ or c$], Accesses (custom) contains any of write
+
+Apply BB:2:Anomaly Detection ATTCK T1021_002 SMB Windows Admin Shares Ver1 on events which are detected by the Local system
+and when the event matches Event ID is any of [4688 or 1]
+and when the event matches Command (custom) contains any of [admin$ or c$ or ipc$], Command (custom) does not contain any of delete
+
+Apply BB:3:Anomaly Detection ATTCK T1021_002 SMB Windows Admin Shares Ver1 on events which are detected by the Local system
+and when the event matches Event ID is any of [4688 or 1]
+and when an event matches any of the following BB:3.1:Anomaly Detection ATTCK T1021_002 SMB Windows Admin Shares Ver1, BB:3.2:Anomaly Detection ATTCK T1021_002 SMB Windows Admin Shares Ver1
+and when the event matches Command (custom) contains any of $, Command (custom) contains any of \\\\\\\\
+
+Apply BB:4:Anomaly Detection ATTCK T1021_002 SMB Windows Admin Shares Ver1 on events which are detected by the Local system
+and when the event matches Event ID is any of 5145
+and when the event matches Process Path (custom) contains any of [psexesvc or -stdin or -stdout or -stderr]
+
