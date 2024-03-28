@@ -19,3 +19,8 @@ Apply BB:4:Anomaly Detection ATTCK T1021_002 SMB Windows Admin Shares Ver1 on ev
 and when the event matches Event ID is any of 5145
 and when the event matches Process Path (custom) contains any of [psexesvc or -stdin or -stdout or -stderr]
 
+Apply BB:3.1:Anomaly Detection ATTCK T1021_002 SMB Windows Admin Shares Ver1 on events which are detected by the Local system
+and when the event matches Command (custom) contains any of [copy or cpi  or  cp ]
+
+Apply BB:3.2:Anomaly Detection ATTCK T1021_002 SMB Windows Admin Shares Ver1 on events which are detected by the Local system
+and when the event matches Process Path (custom) contains any of copy
