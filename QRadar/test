@@ -24,3 +24,6 @@ and when the event matches Command (custom) contains any of [copy or cpi  or  cp
 
 Apply BB:3.2:Anomaly Detection ATTCK T1021_002 SMB Windows Admin Shares Ver1 on events which are detected by the Local system
 and when the event matches Process Path (custom) contains any of copy
+
+Remove test from ruleMove the test downMove the test up and when the flow matches Suspect Content Descriptions is not N/A
+Remove test from ruleMove the test downMove the test up and when the flow matches Suspect Content Descriptions is any of Name_rule_Yara
